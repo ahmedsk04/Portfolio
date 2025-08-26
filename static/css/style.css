@@ -1,0 +1,369 @@
+/* ===== Reset & Base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body {
+    background: #0f172a;
+    color: #f1f5f9;
+    transition: all 0.3s ease;
+}
+
+/* ===== Dark/Light Mode ===== */
+body.light {
+    background: #f8fafc;
+    color: #1f2937;
+}
+body.light header {
+    background: #2563eb;
+}
+
+/* ===== Header & Nav ===== */
+header {
+    background: #1e293b;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav h1 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #38bdf8;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav ul li {
+    margin-left: 25px;
+}
+nav ul li a {
+    color: #f1f5f9;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    color: #22d3ee;
+}
+
+/* ===== Theme Toggle ===== */
+#theme-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 200;
+    color: #f1f5f9;
+}
+
+/* ===== Hero Section ===== */
+#hero {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 90px 20px;
+    background: linear-gradient(135deg, #2563eb, #9333ea);
+    color: #fff;
+}
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    margin: 20px;
+}
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    animation: fadeInDown 1s ease;
+}
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+.btn {
+    background: #22d3ee;
+    color: #0f172a;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #06b6d4;
+    transform: scale(1.05);
+}
+.hero-image {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #22d3ee;
+    animation: fadeIn 1.2s ease;
+}
+
+/* ===== Section Styling ===== */
+.section {
+    padding: 70px 20px;
+    text-align: center;
+}
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #38bdf8;
+}
+
+/* ===== About Section ===== */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.about-text {
+    flex: 1;
+    min-width: 280px;
+    text-align: left;
+}
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+.about-image {
+    flex: 1;
+    min-width: 280px;
+}
+.about-image img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 4px solid #9333ea;
+}
+
+/* ===== Skills Section ===== */
+.skills-container {
+    max-width: 700px;
+    margin: auto;
+}
+.skill {
+    margin-bottom: 25px;
+    text-align: left;
+}
+.skill p {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.skill-bar {
+    width: 100%;
+    background: #1e293b;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.skill-bar .progress {
+    width: 0;
+    height: 20px;
+    background: #22d3ee;
+    border-radius: 25px;
+    transition: width 1s ease-in-out;
+}
+
+/* ===== Projects Section ===== */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+.project-card {
+    background: #2563eb;
+    color: #fff;
+    padding: 25px;
+    width: 260px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s, background 0.3s;
+    text-align: center;
+}
+.project-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: #9333ea;
+}
+
+/* ===== Contact Section ===== */
+#contact form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#contact input, #contact textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background: #1e293b;
+    color: #f1f5f9;
+    font-size: 1rem;
+}
+#contact button {
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    background: #22d3ee;
+    color: #0f172a;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#contact button:hover {
+    background: #06b6d4;
+}
+#success-msg {
+    color: #4ade80;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* ===== Modal ===== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 500;
+}
+.modal-content {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+}
+.modal-content img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+#close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+    from {opacity:0; transform:translateY(20px);}
+    to {opacity:1; transform:translateY(0);}
+}
+@keyframes fadeInDown {
+    from {opacity:0; transform:translateY(-20px);}
+    to {opacity:1; transform:translateY(0);}
+}
+
+/* ===== Responsive ===== */
+@media(max-width:900px){
+    .hero-content, .hero-image, .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-text { text-align: center; }
+}
+
+/* ===== Contact Section Inputs & Button ===== */
+#contact input, #contact textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background: #1e293b; /* Dark default */
+    color: #f1f5f9;      /* Dark default */
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+#contact button {
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    background: #22d3ee;
+    color: #0f172a;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* ===== Light Mode Overrides ===== */
+body.light #contact input,
+body.light #contact textarea {
+    background: #f8fafc;
+    color: #1f2937;
+    border: 1px solid #cbd5e1;
+}
+body.light #contact button {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+/* ===== Social Media Links under Contact ===== */
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+.social-links p {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+.social-links a {
+    color: #22d3ee;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.social-links a:hover {
+    color: #06b6d4;
+}
+
+/* ===== Light Mode Overrides ===== */
+body.light .social-links p {
+    color: #2563eb;
+}
+body.light .social-links a {
+    color: #2563eb;
+}
+body.light .social-links a:hover {
+    color: #1e40af;
+}
