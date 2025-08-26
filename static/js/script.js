@@ -1,9 +1,5 @@
-// ===== Dark/Light Theme Toggle =====
-const toggleBtn = document.getElementById('theme-toggle');
-toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('light');
-    toggleBtn.textContent = document.body.classList.contains('light') ? '🌙' : '☀️';
-});
+// ===== Theme Toggle Removed =====
+// Dark theme is now the default and only theme
 
 // ===== Animate Skill Bars on Scroll =====
 const skillBars = document.querySelectorAll('.skill-bar');
